@@ -1,12 +1,11 @@
 from .settings_common import *
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []
 
 # ロギング設定
-"""
 LOGING = {
     'version': 1, # 1固定
     'disable_existing_loggers': False,
@@ -46,4 +45,9 @@ LOGING = {
         },
     },
 }
-"""
+
+# Email Backend
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Media root
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
